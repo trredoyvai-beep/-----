@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আল-জামি‘আহ আস-সালাফিয়্যাহ — রাজশাহী</title>
+    <meta name="description" content="আল-জামি‘আহ আস-সালাফিয়্যাহ , রাজশাহী - একটি আধুনিক ইসলামিক শিক্ষা প্রতিষ্ঠান">
+    
+    <!-- External Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-green: #2d7d32;
+            --secondary-green: #4caf50;
+            --light-green: #c8e6c9;
+            --primary-gold: #ffc107;
+            --dark-gold: #ff8f00;
+            --primary-blue: #1976d2;
+            --light-blue: #e3f2fd;
+            --dark-blue: #0d47a1;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-hover: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            animation: slideInLeft 1s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue), var(--primary-gold));
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="mosque" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23mosque)"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-content {
+            z-index: 2;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: slideInUp 1s ease 0.5s both;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease 0.7s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-gold);
+            color: var(--dark-gray);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: slideInUp 1s ease 0.9s both;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+            background: var(--dark-gold);
+            color: var(--white);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--primary-blue));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Programs Section */
+        .programs {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-gold));
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+        }
+
+        .program-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-green), var(--primary-blue));
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 0.8;
+        }
+
+        .gallery-overlay i {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        /* Notice Board */
+        .notice-board {
+            background: var(--light-gray);
+        }
+
+        .notice-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-gold);
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .notice-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .notice-date {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--primary-green);
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: var(--secondary-green);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            border-top: 1px solid var(--light-green);
+        }
+
+        .faq-answer.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+            transform: scale(1.02);
+        }
+
+        .submit-btn {
+            background: var(--primary-gold);
+            color: var(--dark-gray);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            width: 30px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-gold);
+            color: var(--dark-gray);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Animations */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+            to {
+                opacity: 1;
+                max-height: 200px;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-green);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                transform: none;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mt-2 { margin-top: 1rem; }
+        .hidden { display: none; }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">আল-জামি‘আহ আস-সালাফিয়্যাহ </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                <li><a href="#programs">প্রোগ্রাম</a></li>
+                <li><a href="#admission">ভর্তি</a></li>
+                <li><a href="#gallery">গ্যালারি</a></li>
+                <li><a href="#notice">নোটিশ</a></li>
+                <li><a href="#faq">প্রশ্নোত্তর</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>আল-জামি‘আহ আস-সালাফিয়্যাহ </h1>
+            <p>রাজশাহী - জ্ঞান ও আধ্যাত্মিকতার কেন্দ্র</p>
+            <a href="#about" class="cta-button">আরও জানুন</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about animate-on-scroll" id="about">
+        <div class="container">
+            <h2 class="section-title">আমাদের সম্পর্কে</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">আমাদের লক্ষ্য ও উদ্দেশ্য</h3>
+                    <p>কুরআন ও সহীহ হাদীসের আলোকে বিশুদ্ধ ইসলাম প্রচার করা, বিদআত ও কুসংস্কার মুক্ত সমাজ গঠন করা এবং যুগোপযোগী আলেম তৈরি করা। পাশাপাশি ইসলামী জ্ঞানচর্চা, গবেষণা ও দাওয়াহ কার্যক্রমের মাধ্যমে ছাত্রদের আদর্শবান মুসলিম হিসেবে গড়ে তোলা।</p>
+                  
+                  <!-- Founder Section with Color-Changing Image Background -->
+<section id="founder" style="padding:80px 20px; background:#f5f5f5; text-align:center;">
+  <h2 style="font-size:36px; color:#333; margin-bottom:50px; font-family:'Arial', sans-serif;">আমাদের প্রতিষ্ঠাতা</h2>
+
+  <!-- Color-changing Circle -->
+  <div style="display:inline-block; position:relative; width:180px; height:180px; border-radius:50%; padding:5px; animation:colorChange 6s infinite linear; margin-bottom:30px;">
+    <div style="background:#fff; width:100%; height:100%; border-radius:50%; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+      <img src="https://i.postimg.cc/RZhdcRVS/director.jpg" alt="প্রতিষ্ঠাতা" style="width:160px; height:160px; border-radius:50%; object-fit:cover;">
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <p style="font-size:20px; color:#555; font-style:italic; line-height:1.6; margin-bottom:15px;">
+ আল-জামি‘আহ আস-সালাফিয়্যাহ, রাজশাহী — এই প্রতিষ্ঠানের মাধ্যমে কুরআন ও সহীহ হাদীসের আলো ছড়িয়ে দেওয়ার এক মহান দায়িত্ব আমরা পালন করে যাচ্ছি। আমাদের লক্ষ্য হলো বিদআত ও কুসংস্কার মুক্ত সমাজ গঠন করা, ইসলামী শিক্ষার আলোকে আদর্শবান মানুষ তৈরি করা এবং যুগোপযোগী আলেম গড়ে তোলা।
+
+আমি সকল শিক্ষক, শিক্ষার্থী, অভিভাবক ও শুভানুধ্যায়ীদের আন্তরিক স্বাগত জানাচ্ছি। আসুন, আমরা সবাই মিলে এই প্রতিষ্ঠানের মাধ্যমে উম্মাহর কল্যাণে কাজ করি এবং আল্লাহর সন্তুষ্টি অর্জনের চেষ্টা করি।
+  </p>
+
+  <!-- Founder Name -->
+  <p style="font-weight:bold; font-size:22px; color:#0072ff;">
+    শায়খ আব্দুর রাযযাক বিন ইউসুফ 
+  </p>
+
+  <style>
+    @keyframes colorChange {
+      0% { background: #ff6b6b; }
+      25% { background: #feca57; }
+      50% { background: #1dd1a1; }
+      75% { background: #54a0ff; }
+      100% { background: #ff6b6b; }
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      #founder h2 { font-size:28px; }
+      #founder p { font-size:18px; }
+      #founder div[style*="width:180px"] { width:150px; height:150px; }
+      #founder img { width:130px; height:130px; }
+    }
+  </style>
+</section>
+                    
+                    <h4 style="color: var(--primary-blue); margin: 1.5rem 0 1rem;">আমাদের বিশেষত্ব:</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-green); margin-right: 0.5rem;"></i> অভিজ্ঞ ও যোগ্য শিক্ষকমণ্ডলী</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-green); margin-right: 0.5rem;"></i> আধুনিক শিক্ষা পদ্ধতি</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-green); margin-right: 0.5rem;"></i> চরিত্র গঠনে বিশেষ গুরুত্ব</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-green); margin-right: 0.5rem;"></i> উন্নত লাইব্রেরি ও গবেষণা সুবিধা</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/mDNP5v2Q/IMG-20250914-133127.jpg" alt="ইসলামিক স্থাপত্য">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs animate-on-scroll" id="programs">
+        <div class="container">
+            <h2 class="section-title">আমাদের প্রোগ্রাম</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3>হিফজুল কুরআন</h3>
+                    <p>পবিত্র কুরআন মুখস্থ করার জন্য বিশেষ ব্যবস্থা। অভিজ্ঞ হাফেজ শিক্ষকদের তত্ত্বাবধানে সুন্দর পরিবেশে হিফজ সম্পন্ন করার সুযোগ।</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3>আলিম কোর্স</h3>
+                    <p>ইসলামিক জ্ঞানে পারদর্শী আলেম তৈরির জন্য বিস্তৃত পাঠ্যক্রম। আরবি ভাষা, ফিকহ, হাদিস, তাফসির ইত্যাদি বিষয়ে গভীর জ্ঞান অর্জন।</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>দাওরায়ে হাদিস</h3>
+                    <p>হাদিসের বিশেষ গবেষণা কোর্স। বুখারি, মুসলিম সহ সিহাহ সিত্তার গভীর অধ্যয়ন ও গবেষণার সুযোগ।</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>উচ্চতর গবেষণা</h3>
+                    <p>ইসলামিক স্টাডিজে উচ্চতর গবেষণার সুযোগ। বিভিন্ন বিষয়ে গবেষণাপত্র প্রণয়ন ও একাডেমিক উৎকর্ষতা অর্জন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section class="admission animate-on-scroll" id="admission">
+        <div class="container">
+            <h2 class="section-title">ভর্তি তথ্য</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">ভর্তির শর্তাবলী</h3>
+                    
+                    <h4 style="color: var(--primary-blue); margin: 1.5rem 0 1rem;">হিফজুল কুরআন বিভাগ:</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> বয়স: ৭-১৫ বছর</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> কুরআন শুদ্ধভাবে পড়তে পারা</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> মেধা ও স্মৃতিশক্তি পরীক্ষা</li>
+                    </ul>
+
+                    <h4 style="color: var(--primary-blue); margin: 1.5rem 0 1rem;">আলিম বিভাগ:</h4>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> দাখিল (SSC) সমতুল্য যোগ্যতা</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> আরবি ভাষায় প্রাথমিক জ্ঞান</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-star" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> ভর্তি পরীক্ষায় উত্তীর্ণ</li>
+                    </ul>
+
+                    <div style="background: var(--light-green); padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;"><i class="fas fa-calendar-alt"></i> গুরুত্বপূর্ণ তারিখ</h4>
+                        <p><strong>ভর্তি ফরম বিতরণ:</strong> ১৫ জানুয়ারি থেকে</p>
+                        <p><strong>ভর্তি পরীক্ষা:</strong> ২৮ ফেব্রুয়ারি</p>
+                        <p><strong>ফলাফল প্রকাশ:</strong> ৫ মার্চ</p>
+                        <p><strong>ক্লাস শুরু:</strong> ১৫ মার্চ</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/3JwktbMv/IMG-20250914-133105.jpg" alt="শিক্ষার্থীরা অধ্যয়নরত">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery animate-on-scroll" id="gallery">
+        <div class="container">
+            <h2 class="section-title">ফটো গ্যালারি</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('https://i.postimg.cc/J7xycCF8/IMG-20250914-133134.jpg')">
+                    <img src="https://i.postimg.cc/mDNP5v2Q/IMG-20250914-133127.jpg" alt="ইসলামিক স্থাপত্য">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="https://i.postimg.cc/J7xycCF8/IMG-20250914-133134.jpg">
+                    <img src="https://i.postimg.cc/63N7zWwW/IMG-20250914-133129.jpg" alt="শিক্ষার্থীরা অধ্যয়নরত">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="https://i.postimg.cc/J7xycCF8/IMG-20250914-133134.jpg">
+                    <img src="https://i.postimg.cc/J7xycCF8/IMG-20250914-133134.jpg" alt="লাইব্রেরি">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('https://i.postimg.cc/Sjb2jKzM/IMG-20250914-134208.jpg')">
+                    <img src="https://i.postimg.cc/Sjb2jKzM/IMG-20250914-134208.jpg" alt="কুরআন অধ্যয়ন">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('https://i.postimg.cc/GhD543fh/IMG-20250914-134215.jpg')">
+                    <img src="https://i.postimg.cc/GhD543fh/IMG-20250914-134215.jpg" alt="ক্যাম্পাস দৃশ্য">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="https://i.postimg.cc/7PdRPJmW/IMG-20250914-134220.jpg">
+                    <img src="https://i.postimg.cc/7PdRPJmW/IMG-20250914-134220.jpg" alt="সেমিনার">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section class="notice-board animate-on-scroll" id="notice">
+        <div class="container">
+            <h2 class="section-title">নোটিশ বোর্ড</h2>
+            <div class="notice-item">
+                <div class="notice-date">১৫ সেপ্টেম্বর, ২০২৫</div>
+                <h3>নতুন শিক্ষাবর্ষের ভর্তি শুরু</h3>
+                <p>২০২৬ শিক্ষাবর্ষের জন্য ভর্তি কার্যক্রম শুরু হয়েছে। ইচ্ছুক প্রার্থীরা ভর্তি ফরম সংগ্রহ করতে পারেন।</p>
+            </div>
+            <div class="notice-item">
+                <div class="notice-date">১০ সেপ্টেম্বর, ২০২৫</div>
+                <h3>বার্ষিক পরীক্ষার সময়সূচী প্রকাশ</h3>
+                <p>সকল বিভাগের বার্ষিক পরীক্ষার সময়সূচী প্রকাশিত হয়েছে। বিস্তারিত জানতে অফিস থেকে যোগাযোগ করুন।</p>
+            </div>
+            <div class="notice-item">
+                <div class="notice-date">০৫ সেপ্টেম্বর, ২০২৫</div>
+                <h3>শিক্ষক দিবস উৎসব</h3>
+                <p>আগামী শুক্রবার শিক্ষক দিবস উপলক্ষে বিশেষ অনুষ্ঠানের আয়োজন করা হয়েছে। সকল শিক্ষার্থীর উপস্থিতি কাম্য।</p>
+            </div>
+            <div class="notice-item">
+                <div class="notice-date">০১ সেপ্টেম্বর, ২০২৫</div>
+                <h3>নতুন লাইব্রেরি উদ্বোধন</h3>
+                <p>প্রতিষ্ঠানের নতুন ডিজিটাল লাইব্রেরি উদ্বোধন হয়েছে। এতে রয়েছে হাজারো ইসলামিক বই ও গবেষণা সামগ্রী।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq animate-on-scroll" id="faq">
+        <div class="container">
+            <h2 class="section-title">প্রশ্নোত্তর (FAQ)</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>ভর্তির জন্য কী কী কাগজপত্র প্রয়োজন?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>ভর্তির জন্য প্রয়োজনীয় কাগজপত্র: জন্ম নিবন্ধন সনদ, শিক্ষাগত যোগ্যতার সনদ, অভিভাবকের জাতীয় পরিচয়পত্র, পাসপোর্ট সাইজের ছবি (৪ কপি), এবং মেডিকেল সার্টিফিকেট।</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>আবাসন সুবিধা আছে কি?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>হ্যাঁ, আমাদের প্রতিষ্ঠানে ছাত্রদের জন্য আধুনিক সুবিধাসম্পন্ন হোস্টেল রয়েছে। এতে রয়েছে পরিচ্ছন্ন থাকার ব্যবস্থা, খাবারের সুবিধা, এবং অধ্যয়নের উপযুক্ত পরিবেশ।</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>বৃত্তির সুবিধা আছে কি?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>মেধাবী ও আর্থিকভাবে অসচ্ছল শিক্ষার্থীদের জন্য বৃত্তির ব্যবস্থা রয়েছে। বৃত্তি পেতে হলে নির্দিষ্ট নম্বর পেতে হবে এবং আর্থিক অবস্থার প্রমাণপত্র জমা দিতে হবে।</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>ক্লাসের সময়সূচী কেমন?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>ক্লাস সকাল ৮টা থেকে দুপুর ১২টা পর্যন্ত। এরপর জোহরের নামাজ ও বিরতি। বিকেল ২টা থেকে ৫টা পর্যন্ত অতিরিক্ত ক্লাস ও স্ব-অধ্যয়নের সময়।</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>পরীক্ষা পদ্ধতি কেমন?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>বছরে তিনটি পরীক্ষা হয়: প্রথম সাময়িক, দ্বিতীয় সাময়িক এবং বার্ষিক পরীক্ষা। লিখিত ও মৌখিক দুই ধরনের পরীক্ষা নেওয়া হয়। হিফজ বিভাগে প্রতিদিন তেলাওয়াত পরীক্ষা হয়।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact animate-on-scroll" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">যোগাযোগ</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 1.5rem;">আমাদের সাথে যোগাযোগ করুন</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">নাম *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ইমেইল *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">ফোন নম্বর</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">বিষয় *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">বার্তা *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">বার্তা পাঠান</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>ঠিকানা</h4>
+                            <p>আল-জামি‘আহ আস-সালাফিয়্যাহ <br>রাজশাহী-৬০০০, বাংলাদেশ</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>ফোন</h4>
+                            <p>+৮৮০ ১৭১১ ১২৩৪৫৬<br>+৮৮০ ৭২১ ৭৮৯০১২</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ইমেইল</h4>
+                            <p>info@salafia-rajshahi.edu.bd<br>admission@salafia-rajshahi.edu.bd</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>অফিস সময়</h4>
+                            <p>শনি - বৃহস্পতি: ৯:০০ - ৫:০০<br>শুক্রবার: ৯:০০ - ১২:০০</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115073.85857793633!2d88.52437087910156!3d24.37444099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbefab5c5d84db%3A0x653baa4b6e1d8c3e!2sRajshahi%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1694234567890!5m2!1sen!2s" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3></h3>
+                    <p>রাজশাহীর একটি প্রতিষ্ঠিত ইসলামিক শিক্ষা প্রতিষ্ঠান যা কুরআন ও সুন্নাহর আলোকে শিক্ষা প্রদান করে।</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>দ্রুত লিংক</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#programs">প্রোগ্রাম</a></li>
+                        <li><a href="#admission">ভর্তি তথ্য</a></li>
+                        <li><a href="#notice">নোটিশ বোর্ড</a></li>
+                        <li><a href="#contact">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>একাডেমিক</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#">হিফজুল কুরআন</a></li>
+                        <li><a href="#">আলিম কোর্স</a></li>
+                        <li><a href="#">দাওরায়ে হাদিস</a></li>
+                        <li><a href="#">উচ্চতর গবেষণা</a></li>
+                        <li><a href="#">লাইব্রেরি</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>যোগাযোগের তথ্য</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> রাজশাহী-৬০০০, বাংলাদেশ</p>
+                    <p><i class="fas fa-phone"></i> +৮৮০ ১৭১১ ১২৩৪৫৬</p>
+                    <p><i class="fas fa-envelope"></i> info@salafia-rajshahi.edu.bd</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ আল-জামি‘আহ আস-সালাফিয়্যাহ , রাজশাহী। সকল অধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ item
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Gallery Modal
+        function openModal(imageSrc) {
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('galleryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name || !email || !subject || !message) {
+                alert('অনুগ্রহ করে সকল প্রয়োজনীয় ক্ষেত্র পূরণ করুন।');
+                return;
+            }
+            
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('অনুগ্রহ করে সঠিক ইমেইল ঠিকানা দিন।');
+                return;
+            }
+            
+            // Success message
+            alert('আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.program-card, .notice-item').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Typing effect for hero section (optional enhancement)
+        const heroTitle = document.querySelector('.hero h1');
+        const originalText = heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                heroTitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Start typing effect after page loads
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+
+        // Add floating animation to social links
+        document.querySelectorAll('.social-links a').forEach((link, index) => {
+            link.style.animationDelay = `${index * 0.1}s`;
+            link.style.animation = 'float 3s ease-in-out infinite';
+        });
+
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Loading animation (optional)
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
